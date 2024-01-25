@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+#czas uczenia siw wszystkich modeli, wyjasnienei dlaczeo to nie dziala jak poiwnno
+#dlugo trwa
+
 # Hyper-parameters
 input_size = 3 #piksel po pikselu ide/ moge testowac np wiersz
 sequence_length = 32 * 32
@@ -84,3 +87,6 @@ with torch.no_grad():
 
     acc = 100.0 * n_correct / n_samples
     print(f'Accuracy of the network on the 10000 test images: {acc} %')
+
+
+    ### zobaczy co mozna porównywać, przetrenować, zobaczyć co jak działa, w obrebie jednej tez mozna badać
